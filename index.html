@@ -1,0 +1,1519 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AquaZone Pools | Luxury Aquatic Center & Resort</title>
+    <meta name="description" content="Modern, resort-style luxury swimming pool and aquatic center featuring heated Olympic pools, spa lounge, memberships, and live schedules." />
+    <meta property="og:title" content="AquaZone Pools | Luxury Aquatic Center & Resort" />
+    <meta property="og:description" content="Modern, resort-style luxury swimming pool and aquatic center featuring heated Olympic pools, spa lounge, memberships, and live schedules." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ocean: '#0077B6',
+              aqua: '#00B4D8',
+              navy: '#03045E',
+              water: '#E0F7FA',
+              'ocean-dark': '#023E8A',
+              'aqua-light': '#90E0EF',
+              'aqua-tint': '#CAF0F8',
+              'water-soft': '#F4FCFD'
+            },
+            fontFamily: {
+              sans: ['Poppins', 'system-ui', '-apple-system', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      body {
+        font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+        color: #03045E;
+      }
+      /* Custom wave clip paths and subtle animations */
+      .glass-nav {
+        transition: all 0.3s ease;
+      }
+      .glass-nav.scrolled {
+        background-color: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 4px 20px -2px rgba(0, 119, 182, 0.12);
+      }
+      .card-hover {
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 30px -10px rgba(0, 119, 182, 0.15);
+      }
+      /* Custom subtle scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #E0F7FA;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #00B4D8;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #0077B6;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-slate-800 antialiased selection:bg-aqua selection:text-white">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div id="top-banner" class="bg-navy text-white text-xs sm:text-sm py-2 px-4 text-center font-medium flex items-center justify-center gap-2">
+      <span class="inline-flex items-center justify-center w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      <span>Pool heated to a soothing 28°C today • Early Bird Lap Swim begins daily at 6:00 AM</span>
+      <a href="#schedule" class="hidden sm:inline-block ml-3 underline hover:text-aqua transition-colors text-xs font-semibold">View Live Timings →</a>
+    </div>
+
+    <!-- 1. STICKY NAVBAR -->
+    <header id="main-header" class="glass-nav sticky top-0 z-50 bg-white/95 border-b border-cyan-100/70 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          
+          <!-- Brand Logo -->
+          <a href="#home" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-aqua rounded-lg py-1">
+            <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-ocean to-aqua flex items-center justify-center text-white shadow-md shadow-aqua/20 group-hover:scale-105 transition-transform">
+              <!-- Wave SVG Icon -->
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+                <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+                <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+              </svg>
+            </div>
+            <div>
+              <span class="text-xl sm:text-2xl font-extrabold tracking-tight text-navy block leading-none">
+                AquaZone<span class="text-aqua">.</span>
+              </span>
+              <span class="text-[11px] font-semibold text-ocean tracking-widest uppercase">Aquatic Resort</span>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation Links -->
+          <nav class="hidden lg:flex items-center gap-7">
+            <a href="#home" class="nav-link text-sm font-medium text-slate-700 hover:text-ocean transition-colors">Home</a>
+            <a href="#about" class="nav-link text-sm font-medium text-slate-700 hover:text-ocean transition-colors">About Us</a>
+            <a href="#facilities" class="nav-link text-sm font-medium text-slate-700 hover:text-ocean transition-colors">Facilities</a>
+            <a href="#memberships" class="nav-link text-sm font-medium text-slate-700 hover:text-ocean transition-colors">Memberships</a>
+            <a href="#schedule" class="nav-link text-sm font-medium text-slate-700 hover:text-ocean transition-colors">Schedule</a>
+            <a href="#gallery" class="nav-link text-sm font-medium text-slate-700 hover:text-ocean transition-colors">Gallery</a>
+            <a href="#contact" class="nav-link text-sm font-medium text-slate-700 hover:text-ocean transition-colors">Contact</a>
+          </nav>
+
+          <!-- Desktop Action CTA -->
+          <div class="hidden lg:flex items-center gap-4">
+            <a href="#contact" onclick="setPlanSelect('Day Pass')" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-ocean to-aqua hover:from-ocean-dark hover:to-ocean shadow-md shadow-ocean/25 hover:shadow-lg hover:shadow-aqua/30 transition-all duration-200 transform hover:-translate-y-0.5">
+              Book a Swim
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Mobile Hamburger Toggle -->
+          <div class="lg:hidden flex items-center">
+            <button id="mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-navy hover:text-ocean hover:bg-water/60 focus:outline-none focus:ring-2 focus:ring-aqua" aria-label="Toggle Navigation Menu">
+              <svg id="hamburger-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+              </svg>
+              <svg id="close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+              </svg>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-xl border-b border-cyan-100 px-6 pt-3 pb-6 space-y-3 transition-all duration-300">
+        <a href="#home" class="mobile-nav-link block py-2 text-base font-semibold text-slate-800 hover:text-ocean">Home</a>
+        <a href="#about" class="mobile-nav-link block py-2 text-base font-semibold text-slate-800 hover:text-ocean">About Us</a>
+        <a href="#facilities" class="mobile-nav-link block py-2 text-base font-semibold text-slate-800 hover:text-ocean">Facilities & Amenities</a>
+        <a href="#memberships" class="mobile-nav-link block py-2 text-base font-semibold text-slate-800 hover:text-ocean">Memberships & Pricing</a>
+        <a href="#schedule" class="mobile-nav-link block py-2 text-base font-semibold text-slate-800 hover:text-ocean">Live Schedule</a>
+        <a href="#gallery" class="mobile-nav-link block py-2 text-base font-semibold text-slate-800 hover:text-ocean">Photo Gallery</a>
+        <a href="#contact" class="mobile-nav-link block py-2 text-base font-semibold text-slate-800 hover:text-ocean">Contact & Location</a>
+        <div class="pt-2">
+          <a href="#contact" onclick="setPlanSelect('Day Pass')" class="mobile-nav-link w-full inline-flex items-center justify-center px-5 py-3 rounded-xl text-base font-semibold text-white bg-gradient-to-r from-ocean to-aqua shadow-md">
+            Book a Swim Today
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section id="home" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      <!-- High-resolution Unsplash pool background -->
+      <img
+        src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=2000&q=80"
+        alt="AquaZone Luxury Resort Swimming Pool"
+        class="absolute inset-0 w-full h-full object-cover object-center"
+      />
+
+      <!-- Dark Blue & Cyan Gradient Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-ocean/60"></div>
+      
+      <!-- Subtle Decorative Radial Light -->
+      <div class="absolute top-1/4 right-10 w-96 h-96 rounded-full bg-aqua/20 blur-3xl pointer-events-none"></div>
+
+      <!-- Hero Content Container -->
+      <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center text-white">
+        
+        <!-- Welcome Pill -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-aqua-tint text-xs sm:text-sm font-semibold mb-6 tracking-wide shadow-lg">
+          <svg class="w-4 h-4 text-aqua" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          Premier Luxury Aquatic Center & Wellness Haven
+        </div>
+
+        <!-- Bold Headline -->
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.15] mb-6 text-white">
+          Dive Into Pure <br class="hidden sm:block" />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-aqua to-cyan-200">Luxury &amp; Refreshment</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="max-w-2xl mx-auto text-lg sm:text-xl text-cyan-100 font-light leading-relaxed mb-10">
+          Experience temperature-controlled Olympic lap pools, private cabanas, and family fun zones.
+        </p>
+
+        <!-- Dual Call-to-Action Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5">
+          <a href="#memberships" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full text-base font-bold text-navy bg-gradient-to-r from-aqua to-cyan-300 hover:from-white hover:to-aqua shadow-xl shadow-aqua/30 transition-all duration-300 transform hover:-translate-y-1">
+            Explore Memberships
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+          <a href="#memberships" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full text-base font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/30 backdrop-blur-md transition-all duration-300 transform hover:-translate-y-1">
+            View Day Pass Pricing
+          </a>
+        </div>
+
+        <!-- Quick Stats Banner -->
+        <div class="mt-14 pt-8 border-t border-white/15 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div>
+            <p class="text-3xl sm:text-4xl font-extrabold text-aqua">50m</p>
+            <p class="text-xs sm:text-sm text-cyan-200 uppercase tracking-wider mt-1">Olympic Standard</p>
+          </div>
+          <div>
+            <p class="text-3xl sm:text-4xl font-extrabold text-aqua">28°C</p>
+            <p class="text-xs sm:text-sm text-cyan-200 uppercase tracking-wider mt-1">Constant Heated</p>
+          </div>
+          <div>
+            <p class="text-3xl sm:text-4xl font-extrabold text-aqua">100%</p>
+            <p class="text-xs sm:text-sm text-cyan-200 uppercase tracking-wider mt-1">Ozone Purified</p>
+          </div>
+          <div>
+            <p class="text-3xl sm:text-4xl font-extrabold text-aqua">4.9 ★</p>
+            <p class="text-xs sm:text-sm text-cyan-200 uppercase tracking-wider mt-1">Member Rating</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Wave Divider Graphic to next section -->
+      <div class="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-none z-10">
+        <svg class="relative block w-full h-12 sm:h-16 text-water-soft" viewBox="0 0 1200 120" preserveAspectRatio="none" fill="currentColor">
+          <path d="M0,0 C150,90 350,-40 500,60 C650,160 900,10 1200,40 L1200,120 L0,120 Z"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ABOUT US SECTION -->
+    <section id="about" class="py-16 sm:py-24 bg-water-soft">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Image Collage -->
+          <div class="lg:col-span-6 relative">
+            <div class="relative mx-auto max-w-md lg:max-w-none">
+              <div class="aspect-4/3 rounded-3xl overflow-hidden shadow-2xl shadow-ocean/10 border-4 border-white">
+                <img
+                  src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=1200&q=80"
+                  alt="AquaZone Luxury Aquatic Center Experience"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <!-- Floating Highlight Card -->
+              <div class="absolute -bottom-6 -right-4 sm:-bottom-8 sm:-right-6 bg-white p-5 sm:p-6 rounded-2xl shadow-xl border border-cyan-100 max-w-xs">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-xl bg-water flex items-center justify-center text-ocean font-bold text-xl">
+                    🌊
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-navy text-sm sm:text-base">Resort Atmosphere</h4>
+                    <p class="text-xs text-slate-500">Crystal water, private cabanas & poolside café.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Text Information -->
+          <div class="lg:col-span-6 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-water text-ocean text-xs font-bold uppercase tracking-wider">
+              About AquaZone Pools
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight leading-tight">
+              An Architectural Oasis Dedicated to <span class="text-ocean">Aquatic Excellence</span>
+            </h2>
+            <p class="text-slate-600 leading-relaxed text-base sm:text-lg">
+              AquaZone Pools combines high-performance sports training with five-star wellness relaxation. Designed for competitive swimmers, fitness enthusiasts, and families alike, our sanctuary delivers year-round heated waters, eco-friendly ozone purification, and world-class hospitality.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div class="flex items-start gap-3 p-3 rounded-xl bg-white border border-cyan-100">
+                <div class="w-8 h-8 rounded-lg bg-water flex items-center justify-center text-ocean shrink-0 mt-0.5">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-navy text-sm">Ozone Purification</h4>
+                  <p class="text-xs text-slate-500">Gentle on skin and eyes with zero harsh odors.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-3 rounded-xl bg-white border border-cyan-100">
+                <div class="w-8 h-8 rounded-lg bg-water flex items-center justify-center text-ocean shrink-0 mt-0.5">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-navy text-sm">Certified Lifeguards</h4>
+                  <p class="text-xs text-slate-500">Red Cross certified safety team always on deck.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-3 rounded-xl bg-white border border-cyan-100">
+                <div class="w-8 h-8 rounded-lg bg-water flex items-center justify-center text-ocean shrink-0 mt-0.5">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-navy text-sm">Flexible Timings</h4>
+                  <p class="text-xs text-slate-500">Open 7 days a week from 6:00 AM to 10:00 PM.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-3 rounded-xl bg-white border border-cyan-100">
+                <div class="w-8 h-8 rounded-lg bg-water flex items-center justify-center text-ocean shrink-0 mt-0.5">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 00-9.78 2.096A4.001 4.001 0 003 15z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-navy text-sm">Steam &amp; Towel Valet</h4>
+                  <p class="text-xs text-slate-500">Complimentary fresh towels and locker suites.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4">
+              <a href="#facilities" class="inline-flex items-center text-sm font-bold text-ocean hover:text-ocean-dark group">
+                Discover all 4 aquatic zones 
+                <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. FACILITIES & AMENITIES GRID -->
+    <section id="facilities" class="py-20 sm:py-28 bg-white relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-block text-xs sm:text-sm font-bold tracking-wider uppercase text-aqua bg-water px-4 py-1.5 rounded-full mb-3">
+            Facilities &amp; Amenities
+          </span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy tracking-tight">
+            Designed for Champions, Families &amp; Seekers of Calm
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-slate-600">
+            Four specialized aquatic zones engineered for peak athletic performance, playful family recreation, and deep restorative tranquility.
+          </p>
+        </div>
+
+        <!-- 4-Card Interactive Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <!-- Card 1: Olympic-Sized Lap Pool -->
+          <div class="card-hover bg-white rounded-2xl border border-cyan-100 p-7 flex flex-col justify-between relative group overflow-hidden">
+            <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-ocean to-aqua"></div>
+            <div>
+              <!-- SVG Icon 1 -->
+              <div class="w-14 h-14 rounded-2xl bg-water text-ocean flex items-center justify-center mb-6 group-hover:bg-ocean group-hover:text-white transition-colors duration-300 shadow-sm">
+                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+                  <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+                  <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-navy mb-2">Olympic-Sized Lap Pool</h3>
+              <p class="text-sm font-semibold text-aqua mb-3">Heated to 28°C year-round</p>
+              <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                10 competition-standard 50-meter lanes fitted with anti-wave dividers, digital pacing systems, and precision touchpads for lap workouts.
+              </p>
+            </div>
+            <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-4">
+              <li class="flex items-center gap-2">
+                <span class="text-aqua">✓</span> 50m × 25m FINA specifications
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-aqua">✓</span> Dedicated fast, medium &amp; slow lanes
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-aqua">✓</span> Underwater acoustic pace system
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 2: Splash & Play Water Park -->
+          <div class="card-hover bg-white rounded-2xl border border-cyan-100 p-7 flex flex-col justify-between relative group overflow-hidden">
+            <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-aqua to-cyan-300"></div>
+            <div>
+              <!-- SVG Icon 2 -->
+              <div class="w-14 h-14 rounded-2xl bg-water text-aqua flex items-center justify-center mb-6 group-hover:bg-aqua group-hover:text-white transition-colors duration-300 shadow-sm">
+                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v4"/>
+                  <path d="m4.93 4.93 2.83 2.83"/>
+                  <path d="M2 12h4"/>
+                  <path d="m4.93 19.07 2.83-2.83"/>
+                  <path d="M12 22v-4"/>
+                  <path d="m19.07 19.07-2.83-2.83"/>
+                  <path d="M22 12h-4"/>
+                  <path d="m19.07 4.93-2.83 2.83"/>
+                  <circle cx="12" cy="12" r="4"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-navy mb-2">Splash &amp; Play Park</h3>
+              <p class="text-sm font-semibold text-aqua mb-3">Safe, fun zones for kids</p>
+              <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                Interactive shallow splash pad featuring gentle water arches, soft mini-slides, tipping water buckets, and zero-depth entry areas.
+              </p>
+            </div>
+            <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-4">
+              <li class="flex items-center gap-2">
+                <span class="text-aqua">✓</span> Zero-depth slip-resistant rubber deck
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-aqua">✓</span> Shaded parent lounge loungers
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-aqua">✓</span> Full-time certified splash monitors
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 3: Spa & Sauna Lounge -->
+          <div class="card-hover bg-white rounded-2xl border border-cyan-100 p-7 flex flex-col justify-between relative group overflow-hidden">
+            <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-ocean-dark to-ocean"></div>
+            <div>
+              <!-- SVG Icon 3 -->
+              <div class="w-14 h-14 rounded-2xl bg-water text-ocean-dark flex items-center justify-center mb-6 group-hover:bg-ocean-dark group-hover:text-white transition-colors duration-300 shadow-sm">
+                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 3v3"/>
+                  <path d="M10 3v3"/>
+                  <path d="M14 3v3"/>
+                  <path d="M18 3v3"/>
+                  <path d="M2 13h20"/>
+                  <path d="M5 20h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-navy mb-2">Spa &amp; Sauna Lounge</h3>
+              <p class="text-sm font-semibold text-aqua mb-3">Jacuzzi &amp; relaxation beds</p>
+              <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                Rejuvenate sore muscles in our 38°C hydrotherapy whirlpool, Scandinavian cedar wood sauna, and herbal eucalyptus steam suite.
+              </p>
+            </div>
+            <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-4">
+              <li class="flex items-center gap-2">
+                <span class="text-aqua">✓</span> Multi-jet hydro-massage Jacuzzi
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-aqua">✓</span> Finnish dry sauna &amp; cold plunge
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-aqua">✓</span> Heated ergonomic stone loungers
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 4: Swim Academy -->
+          <div class="card-hover bg-white rounded-2xl border border-cyan-100 p-7 flex flex-col justify-between relative group overflow-hidden">
+            <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-ocean to-aqua"></div>
+            <div>
+              <!-- SVG Icon 4 -->
+              <div class="w-14 h-14 rounded-2xl bg-water text-ocean flex items-center justify-center mb-6 group-hover:bg-ocean group-hover:text-white transition-colors duration-300 shadow-sm">
+                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1Z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-navy mb-2">Swim Academy</h3>
+              <p class="text-sm font-semibold text-aqua mb-3">1-on-1 private coaching</p>
+              <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                From infant water safety to adult stroke biomechanics and competitive pacing, our certified coaches tailor sessions to your individual goals.
+              </p>
+            </div>
+            <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-4">
+              <li class="flex items-center gap-2">
+                <span class="text-aqua">✓</span> Video stroke analysis technology
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-aqua">✓</span> Beginner, intermediate &amp; master tiers
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-aqua">✓</span> Small 1:4 maximum group class ratio
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. MEMBERSHIP OPTIONS (PRICING CARDS) -->
+    <section id="memberships" class="py-20 sm:py-28 bg-gradient-to-b from-water-soft via-water/40 to-white relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-block text-xs sm:text-sm font-bold tracking-wider uppercase text-ocean bg-water px-4 py-1.5 rounded-full mb-3">
+            Membership Options
+          </span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy tracking-tight">
+            Flexible Passes for Every Aquatic Lifestyle
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-slate-600">
+            Enjoy transparent pricing with zero lock-in contracts, full amenity access, and member privileges.
+          </p>
+        </div>
+
+        <!-- 3-Tier Pricing Layout with Highlighted Center Card -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto">
+          
+          <!-- Card 1: Day Pass -->
+          <div class="bg-white rounded-3xl border border-cyan-100 p-8 sm:p-9 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold text-navy">Day Pass</h3>
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-100 text-slate-600">Single Entry</span>
+              </div>
+              <p class="text-sm text-slate-500 mb-6">Ideal for casual swimmers, vacationers, and weekend fitness.</p>
+              
+              <div class="flex items-baseline mb-8">
+                <span class="text-5xl font-extrabold text-navy tracking-tight">$25</span>
+                <span class="ml-2 text-slate-500 font-medium">/ day</span>
+              </div>
+
+              <!-- Feature List -->
+              <div class="space-y-4 mb-8">
+                <div class="flex items-center gap-3 text-sm text-slate-700">
+                  <div class="w-5 h-5 rounded-full bg-water text-ocean flex items-center justify-center text-xs font-bold shrink-0">✓</div>
+                  <span>Full-day access to 50m Olympic Pool</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm text-slate-700">
+                  <div class="w-5 h-5 rounded-full bg-water text-ocean flex items-center justify-center text-xs font-bold shrink-0">✓</div>
+                  <span>Electronic locker &amp; towel service</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm text-slate-700">
+                  <div class="w-5 h-5 rounded-full bg-water text-ocean flex items-center justify-center text-xs font-bold shrink-0">✓</div>
+                  <span>Access to poolside sun deck</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm text-slate-700">
+                  <div class="w-5 h-5 rounded-full bg-water text-ocean flex items-center justify-center text-xs font-bold shrink-0">✓</div>
+                  <span>Complimentary high-speed Wi-Fi</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm text-slate-400">
+                  <div class="w-5 h-5 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center text-xs shrink-0">—</div>
+                  <span>Sauna &amp; Jacuzzi lounge excluded</span>
+                </div>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              onclick="choosePlan('Day Pass')"
+              class="w-full py-3.5 px-6 rounded-2xl font-bold text-ocean bg-water hover:bg-ocean hover:text-white border border-cyan-200 transition-all duration-200 text-center"
+            >
+              Choose Plan
+            </button>
+          </div>
+
+          <!-- Card 2: Monthly Swimmer (MOST POPULAR) -->
+          <div class="bg-gradient-to-b from-navy to-ocean-dark text-white rounded-3xl p-8 sm:p-9 shadow-2xl shadow-ocean/30 border-2 border-aqua relative flex flex-col justify-between transform lg:-translate-y-4">
+            
+            <!-- Most Popular Badge -->
+            <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+              <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider bg-gradient-to-r from-aqua to-cyan-200 text-navy shadow-lg">
+                ★ Most Popular Choice
+              </span>
+            </div>
+
+            <div>
+              <div class="flex justify-between items-center mb-4 mt-2">
+                <h3 class="text-2xl font-bold text-white">Monthly Swimmer</h3>
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-white/20 text-aqua-tint">Billed Monthly</span>
+              </div>
+              <p class="text-sm text-cyan-100 mb-6">Unlimited lap access and wellness recovery for regulars.</p>
+              
+              <div class="flex items-baseline mb-8">
+                <span class="text-5xl font-extrabold text-white tracking-tight">$79</span>
+                <span class="ml-2 text-cyan-200 font-medium">/ month</span>
+              </div>
+
+              <!-- Feature List -->
+              <div class="space-y-4 mb-8">
+                <div class="flex items-center gap-3 text-sm text-cyan-50">
+                  <div class="w-5 h-5 rounded-full bg-aqua text-navy flex items-center justify-center text-xs font-bold shrink-0">✓</div>
+                  <span class="font-medium">Unlimited pool &amp; lane access 7 days/wk</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm text-cyan-50">
+                  <div class="w-5 h-5 rounded-full bg-aqua text-navy flex items-center justify-center text-xs font-bold shrink-0">✓</div>
+                  <span class="font-medium">Early-bird priority lap lanes (6 AM - 9 AM)</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm text-cyan-50">
+                  <div class="w-5 h-5 rounded-full bg-aqua text-navy flex items-center justify-center text-xs font-bold shrink-0">✓</div>
+                  <span class="font-medium">Full Spa, Finnish Sauna &amp; Jacuzzi access</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm text-cyan-50">
+                  <div class="w-5 h-5 rounded-full bg-aqua text-navy flex items-center justify-center text-xs font-bold shrink-0">✓</div>
+                  <span class="font-medium">2 Complimentary guest passes per month</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm text-cyan-50">
+                  <div class="w-5 h-5 rounded-full bg-aqua text-navy flex items-center justify-center text-xs font-bold shrink-0">✓</div>
+                  <span class="font-medium">10% discount at Pro Shop &amp; Juice Bar</span>
+                </div>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              onclick="choosePlan('Monthly Swimmer')"
+              class="w-full py-4 px-6 rounded-2xl font-bold text-navy bg-gradient-to-r from-aqua to-cyan-200 hover:from-white hover:to-aqua shadow-lg shadow-aqua/20 transition-all duration-200 text-center"
+            >
+              Choose Plan
+            </button>
+          </div>
+
+          <!-- Card 3: Family VIP Pass -->
+          <div class="bg-white rounded-3xl border border-cyan-100 p-8 sm:p-9 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold text-navy">Family VIP Pass</h3>
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-100 text-slate-600">Up to 4 Persons</span>
+              </div>
+              <p class="text-sm text-slate-500 mb-6">Complete aquatic resort access for the entire household.</p>
+              
+              <div class="flex items-baseline mb-8">
+                <span class="text-5xl font-extrabold text-navy tracking-tight">$149</span>
+                <span class="ml-2 text-slate-500 font-medium">/ month</span>
+              </div>
+
+              <!-- Feature List -->
+              <div class="space-y-4 mb-8">
+                <div class="flex items-center gap-3 text-sm text-slate-700">
+                  <div class="w-5 h-5 rounded-full bg-water text-ocean flex items-center justify-center text-xs font-bold shrink-0">✓</div>
+                  <span>Full access for 2 adults + 2 children</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm text-slate-700">
+                  <div class="w-5 h-5 rounded-full bg-water text-ocean flex items-center justify-center text-xs font-bold shrink-0">✓</div>
+                  <span>Unlimited Splash &amp; Play Water Park</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm text-slate-700">
+                  <div class="w-5 h-5 rounded-full bg-water text-ocean flex items-center justify-center text-xs font-bold shrink-0">✓</div>
+                  <span>4 Kids coaching sessions included / mo</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm text-slate-700">
+                  <div class="w-5 h-5 rounded-full bg-water text-ocean flex items-center justify-center text-xs font-bold shrink-0">✓</div>
+                  <span>Weekend private cabana reservation discount</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm text-slate-700">
+                  <div class="w-5 h-5 rounded-full bg-water text-ocean flex items-center justify-center text-xs font-bold shrink-0">✓</div>
+                  <span>All Spa &amp; Hydro-Jacuzzi lounge amenities</span>
+                </div>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              onclick="choosePlan('Family VIP Pass')"
+              class="w-full py-3.5 px-6 rounded-2xl font-bold text-ocean bg-water hover:bg-ocean hover:text-white border border-cyan-200 transition-all duration-200 text-center"
+            >
+              Choose Plan
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. LIVE SCHEDULE & CLASSES -->
+    <section id="schedule" class="py-20 sm:py-28 bg-white relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="inline-block text-xs sm:text-sm font-bold tracking-wider uppercase text-aqua bg-water px-4 py-1.5 rounded-full mb-3">
+            Timetable &amp; Programs
+          </span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy tracking-tight">
+            Live Schedule &amp; Daily Classes
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-slate-600">
+            Check live lane allocations and join group coaching, gentle aerobics, or open relaxation sessions.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10">
+          <button type="button" onclick="filterSchedule('all')" class="schedule-tab px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-ocean text-white shadow-md" data-category="all">
+            All Sessions
+          </button>
+          <button type="button" onclick="filterSchedule('open-swim')" class="schedule-tab px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-water text-navy hover:bg-cyan-100" data-category="open-swim">
+            Open Swim
+          </button>
+          <button type="button" onclick="filterSchedule('lap-hours')" class="schedule-tab px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-water text-navy hover:bg-cyan-100" data-category="lap-hours">
+            Adult Lap Hours
+          </button>
+          <button type="button" onclick="filterSchedule('aerobics')" class="schedule-tab px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-water text-navy hover:bg-cyan-100" data-category="aerobics">
+            Aqua Aerobics
+          </button>
+          <button type="button" onclick="filterSchedule('kids-coaching')" class="schedule-tab px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-water text-navy hover:bg-cyan-100" data-category="kids-coaching">
+            Kids Coaching
+          </button>
+        </div>
+
+        <!-- Schedule Items Table / Grid -->
+        <div class="bg-white rounded-3xl border border-cyan-100 shadow-lg shadow-ocean/5 overflow-hidden">
+          
+          <!-- Schedule Row 1 -->
+          <div class="schedule-item p-5 sm:p-6 border-b border-slate-100 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-water-soft transition-colors" data-category="lap-hours">
+            <div class="flex items-start sm:items-center gap-4">
+              <div class="w-16 h-16 rounded-2xl bg-water text-ocean flex flex-col items-center justify-center shrink-0 font-bold">
+                <span class="text-xs uppercase text-slate-500 font-medium">Daily</span>
+                <span class="text-sm">06:00</span>
+              </div>
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-cyan-100 text-ocean">Lap Hours</span>
+                  <span class="text-xs text-slate-500">6:00 AM – 9:00 AM</span>
+                </div>
+                <h4 class="text-lg font-bold text-navy">Sunrise Master Lap Swim</h4>
+                <p class="text-xs sm:text-sm text-slate-500">All 10 lanes allocated by pace (Fast, Moderate, Technique). Heated to 28°C.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between md:justify-end gap-6 pt-2 md:pt-0">
+              <div class="text-left md:text-right text-xs text-slate-500">
+                <p class="font-semibold text-navy">Olympic Pool</p>
+                <p>Lanes 1–10 Open</p>
+              </div>
+              <a href="#contact" onclick="setBookingClass('Sunrise Master Lap Swim')" class="px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold text-ocean bg-water hover:bg-ocean hover:text-white transition-colors">
+                Reserve Slot
+              </a>
+            </div>
+          </div>
+
+          <!-- Schedule Row 2 -->
+          <div class="schedule-item p-5 sm:p-6 border-b border-slate-100 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-water-soft transition-colors" data-category="aerobics">
+            <div class="flex items-start sm:items-center gap-4">
+              <div class="w-16 h-16 rounded-2xl bg-water text-ocean flex flex-col items-center justify-center shrink-0 font-bold">
+                <span class="text-xs uppercase text-slate-500 font-medium">Mon/Wed</span>
+                <span class="text-sm">09:30</span>
+              </div>
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800">Aqua Aerobics</span>
+                  <span class="text-xs text-slate-500">9:30 AM – 10:30 AM</span>
+                </div>
+                <h4 class="text-lg font-bold text-navy">Hydro-Core Cardio &amp; Rhythm</h4>
+                <p class="text-xs sm:text-sm text-slate-500">Low-impact, high-energy resistance cardio with water dumbbells &amp; upbeat music.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between md:justify-end gap-6 pt-2 md:pt-0">
+              <div class="text-left md:text-right text-xs text-slate-500">
+                <p class="font-semibold text-navy">Instructor: Elena Rossi</p>
+                <p>Warm Wellness Pool</p>
+              </div>
+              <a href="#contact" onclick="setBookingClass('Hydro-Core Cardio & Rhythm')" class="px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold text-ocean bg-water hover:bg-ocean hover:text-white transition-colors">
+                Reserve Slot
+              </a>
+            </div>
+          </div>
+
+          <!-- Schedule Row 3 -->
+          <div class="schedule-item p-5 sm:p-6 border-b border-slate-100 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-water-soft transition-colors" data-category="open-swim">
+            <div class="flex items-start sm:items-center gap-4">
+              <div class="w-16 h-16 rounded-2xl bg-water text-ocean flex flex-col items-center justify-center shrink-0 font-bold">
+                <span class="text-xs uppercase text-slate-500 font-medium">Daily</span>
+                <span class="text-sm">11:00</span>
+              </div>
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800">Open Swim</span>
+                  <span class="text-xs text-slate-500">11:00 AM – 3:30 PM</span>
+                </div>
+                <h4 class="text-lg font-bold text-navy">Midday Free Swim &amp; Cabana Leisure</h4>
+                <p class="text-xs sm:text-sm text-slate-500">Open general recreation across the main lagoon, splash park, and outdoor sun decks.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between md:justify-end gap-6 pt-2 md:pt-0">
+              <div class="text-left md:text-right text-xs text-slate-500">
+                <p class="font-semibold text-navy">All Zones Active</p>
+                <p>Day Passes Welcome</p>
+              </div>
+              <a href="#contact" onclick="setBookingClass('Midday Free Swim')" class="px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold text-ocean bg-water hover:bg-ocean hover:text-white transition-colors">
+                Reserve Slot
+              </a>
+            </div>
+          </div>
+
+          <!-- Schedule Row 4 -->
+          <div class="schedule-item p-5 sm:p-6 border-b border-slate-100 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-water-soft transition-colors" data-category="kids-coaching">
+            <div class="flex items-start sm:items-center gap-4">
+              <div class="w-16 h-16 rounded-2xl bg-water text-ocean flex flex-col items-center justify-center shrink-0 font-bold">
+                <span class="text-xs uppercase text-slate-500 font-medium">Tue/Thu/Sat</span>
+                <span class="text-sm">16:00</span>
+              </div>
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900">Kids Coaching</span>
+                  <span class="text-xs text-slate-500">4:00 PM – 5:30 PM</span>
+                </div>
+                <h4 class="text-lg font-bold text-navy">Junior Dolphins Swim Academy (Ages 5–12)</h4>
+                <p class="text-xs sm:text-sm text-slate-500">Stroke development, water buoyancy confidence, and fun relay challenges.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between md:justify-end gap-6 pt-2 md:pt-0">
+              <div class="text-left md:text-right text-xs text-slate-500">
+                <p class="font-semibold text-navy">Coach: Marcus Vance</p>
+                <p>Shallow Training Bay</p>
+              </div>
+              <a href="#contact" onclick="setBookingClass('Junior Dolphins Swim Academy')" class="px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold text-ocean bg-water hover:bg-ocean hover:text-white transition-colors">
+                Reserve Slot
+              </a>
+            </div>
+          </div>
+
+          <!-- Schedule Row 5 -->
+          <div class="schedule-item p-5 sm:p-6 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-water-soft transition-colors" data-category="lap-hours">
+            <div class="flex items-start sm:items-center gap-4">
+              <div class="w-16 h-16 rounded-2xl bg-water text-ocean flex flex-col items-center justify-center shrink-0 font-bold">
+                <span class="text-xs uppercase text-slate-500 font-medium">Daily</span>
+                <span class="text-sm">18:30</span>
+              </div>
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-indigo-100 text-indigo-900">Adult Lap Hours</span>
+                  <span class="text-xs text-slate-500">6:30 PM – 9:30 PM</span>
+                </div>
+                <h4 class="text-lg font-bold text-navy">Twilight Endurance &amp; Spa Recovery</h4>
+                <p class="text-xs sm:text-sm text-slate-500">Evening swimming under submerged fiber-optic lights followed by sauna access.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between md:justify-end gap-6 pt-2 md:pt-0">
+              <div class="text-left md:text-right text-xs text-slate-500">
+                <p class="font-semibold text-navy">Olympic Pool &amp; Spa</p>
+                <p>Adults Only (18+)</p>
+              </div>
+              <a href="#contact" onclick="setBookingClass('Twilight Endurance & Spa Recovery')" class="px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold text-ocean bg-water hover:bg-ocean hover:text-white transition-colors">
+                Reserve Slot
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. PHOTO GALLERY -->
+    <section id="gallery" class="py-20 sm:py-28 bg-water-soft relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-block text-xs sm:text-sm font-bold tracking-wider uppercase text-aqua bg-water px-4 py-1.5 rounded-full mb-3">
+            Visual Experience
+          </span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy tracking-tight">
+            Glimpse Into Our Aquatic Sanctuary
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-slate-600">
+            Explore crystal clear waters, sun-kissed pool decks, family splash areas, and soothing hydrotherapy lounges.
+          </p>
+        </div>
+
+        <!-- Responsive Image Grid with Hover Zoom-in Effects -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          
+          <!-- Image 1 -->
+          <div class="group relative aspect-4/3 rounded-3xl overflow-hidden shadow-lg border border-cyan-100 cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1600&q=80', 'Olympic Heated Lap Pool')">
+            <img
+              src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80"
+              alt="Olympic Lap Pool"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+              <div>
+                <span class="text-xs font-semibold text-aqua tracking-wider uppercase">Facility</span>
+                <h4 class="text-lg font-bold text-white">Olympic 50m Lap Pool</h4>
+                <p class="text-xs text-cyan-200">Click to view full photo</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 2 -->
+          <div class="group relative aspect-4/3 rounded-3xl overflow-hidden shadow-lg border border-cyan-100 cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80', 'Luxury Resort Cabanas & Loungers')">
+            <img
+              src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80"
+              alt="Luxury Resort Cabanas & Loungers"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+              <div>
+                <span class="text-xs font-semibold text-aqua tracking-wider uppercase">Relaxation</span>
+                <h4 class="text-lg font-bold text-white">Private Poolside Cabanas</h4>
+                <p class="text-xs text-cyan-200">Click to view full photo</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 3 -->
+          <div class="group relative aspect-4/3 rounded-3xl overflow-hidden shadow-lg border border-cyan-100 cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=1600&q=80', 'Lagoon & Family Fun Zones')">
+            <img
+              src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=800&q=80"
+              alt="Lagoon & Family Fun Zones"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+              <div>
+                <span class="text-xs font-semibold text-aqua tracking-wider uppercase">Family</span>
+                <h4 class="text-lg font-bold text-white">Splash Lagoon &amp; Water Park</h4>
+                <p class="text-xs text-cyan-200">Click to view full photo</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 4 -->
+          <div class="group relative aspect-4/3 rounded-3xl overflow-hidden shadow-lg border border-cyan-100 cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1600&q=80', 'Hydrotherapy Jacuzzi & Spa')">
+            <img
+              src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80"
+              alt="Hydrotherapy Jacuzzi & Spa"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+              <div>
+                <span class="text-xs font-semibold text-aqua tracking-wider uppercase">Wellness</span>
+                <h4 class="text-lg font-bold text-white">Hydrotherapy Whirlpool Spa</h4>
+                <p class="text-xs text-cyan-200">Click to view full photo</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 5 -->
+          <div class="group relative aspect-4/3 rounded-3xl overflow-hidden shadow-lg border border-cyan-100 cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1600&q=80', 'Sunset Oceanfront Atmosphere')">
+            <img
+              src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=800&q=80"
+              alt="Sunset Oceanfront Atmosphere"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+              <div>
+                <span class="text-xs font-semibold text-aqua tracking-wider uppercase">Atmosphere</span>
+                <h4 class="text-lg font-bold text-white">Sunset Illuminated Deck</h4>
+                <p class="text-xs text-cyan-200">Click to view full photo</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 6 -->
+          <div class="group relative aspect-4/3 rounded-3xl overflow-hidden shadow-lg border border-cyan-100 cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=1600&q=80', 'Swim Academy Training Lane')">
+            <img
+              src="https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=800&q=80"
+              alt="Swim Academy Training Lane"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+              <div>
+                <span class="text-xs font-semibold text-aqua tracking-wider uppercase">Coaching</span>
+                <h4 class="text-lg font-bold text-white">Swim Academy Practice</h4>
+                <p class="text-xs text-cyan-200">Click to view full photo</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. CONTACT & LOCATION SECTION -->
+    <section id="contact" class="py-20 sm:py-28 bg-white relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-block text-xs sm:text-sm font-bold tracking-wider uppercase text-ocean bg-water px-4 py-1.5 rounded-full mb-3">
+            Contact &amp; Reservations
+          </span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy tracking-tight">
+            Plan Your Visit or Reserve a Swim
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-slate-600">
+            Have questions about memberships or classes? Send us a message or lock in your day pass reservation instantly.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <!-- Left Column: Info Block, Hours, Map Placeholder -->
+          <div class="lg:col-span-5 space-y-8">
+            
+            <!-- Operating Hours Card -->
+            <div class="bg-water-soft rounded-3xl p-7 border border-cyan-100">
+              <div class="flex items-center gap-3 mb-5">
+                <div class="w-10 h-10 rounded-xl bg-water text-ocean flex items-center justify-center">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-navy">Operating Hours</h3>
+              </div>
+              <ul class="space-y-3 text-sm">
+                <li class="flex justify-between pb-2 border-b border-cyan-100/60">
+                  <span class="font-medium text-slate-700">Monday – Friday</span>
+                  <span class="font-semibold text-ocean">6:00 AM – 10:00 PM</span>
+                </li>
+                <li class="flex justify-between pb-2 border-b border-cyan-100/60">
+                  <span class="font-medium text-slate-700">Saturday – Sunday</span>
+                  <span class="font-semibold text-ocean">7:00 AM – 9:00 PM</span>
+                </li>
+                <li class="flex justify-between">
+                  <span class="font-medium text-slate-700">Public Holidays</span>
+                  <span class="font-semibold text-ocean">8:00 AM – 8:00 PM</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Address & Phone Card -->
+            <div class="bg-water-soft rounded-3xl p-7 border border-cyan-100 space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-water text-ocean flex items-center justify-center shrink-0 mt-1">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-navy text-sm">Facility Address</h4>
+                  <p class="text-slate-600 text-sm mt-0.5">142 Oceanfront Boulevard, Marina Bay District, CA 90291</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 pt-2">
+                <div class="w-10 h-10 rounded-xl bg-water text-ocean flex items-center justify-center shrink-0 mt-1">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-navy text-sm">Direct Hotline</h4>
+                  <p class="text-slate-600 text-sm mt-0.5">+1 (800) 555-AQUA (2782)</p>
+                  <p class="text-xs text-slate-400">concierge@aquazonepools.com</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Google Maps Embed Placeholder -->
+            <div class="rounded-3xl overflow-hidden border border-cyan-100 shadow-md relative h-56 bg-slate-100">
+              <iframe
+                title="AquaZone Aquatic Center Location Map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105912.87532320152!2d-118.52848937989308!3d34.02008779058728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2a4d334547271%3A0x6a0907e5c548d28e!2sSanta%20Monica%20State%20Beach!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus"
+                class="w-full h-full border-0"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-xl text-xs font-semibold text-navy shadow">
+                📍 AquaZone Marina Campus
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Interactive HTML Form -->
+          <div class="lg:col-span-7">
+            <div class="bg-white rounded-3xl p-8 sm:p-10 border border-cyan-100 shadow-xl shadow-ocean/5">
+              <h3 class="text-2xl font-bold text-navy mb-2">Book Your Aquatic Session</h3>
+              <p class="text-sm text-slate-500 mb-8">Fill out your details to request lane reservations, swim coaching, or day passes.</p>
+
+              <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-5">
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label for="user-name" class="block text-xs font-semibold uppercase text-slate-700 mb-2">Full Name *</label>
+                    <input
+                      type="text"
+                      id="user-name"
+                      required
+                      placeholder="e.g. Sarah Jenkins"
+                      class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:bg-white focus:border-aqua focus:ring-2 focus:ring-aqua/20 outline-none text-sm transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label for="user-email" class="block text-xs font-semibold uppercase text-slate-700 mb-2">Email Address *</label>
+                    <input
+                      type="email"
+                      id="user-email"
+                      required
+                      placeholder="sarah@example.com"
+                      class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:bg-white focus:border-aqua focus:ring-2 focus:ring-aqua/20 outline-none text-sm transition-all"
+                    />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label for="visit-date" class="block text-xs font-semibold uppercase text-slate-700 mb-2">Preferred Date *</label>
+                    <input
+                      type="date"
+                      id="visit-date"
+                      required
+                      class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:bg-white focus:border-aqua focus:ring-2 focus:ring-aqua/20 outline-none text-sm transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label for="plan-select" class="block text-xs font-semibold uppercase text-slate-700 mb-2">Selected Pass / Program *</label>
+                    <select
+                      id="plan-select"
+                      required
+                      class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:bg-white focus:border-aqua focus:ring-2 focus:ring-aqua/20 outline-none text-sm transition-all"
+                    >
+                      <option value="Day Pass">Day Pass ($25 / day)</option>
+                      <option value="Monthly Swimmer" selected>Monthly Swimmer ($79 / mo)</option>
+                      <option value="Family VIP Pass">Family VIP Pass ($149 / mo)</option>
+                      <option value="Swim Academy 1-on-1">Swim Academy 1-on-1 Coaching</option>
+                      <option value="Aqua Aerobics Class">Aqua Aerobics Group Class</option>
+                      <option value="General Inquiry">General Center Inquiry</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="user-message" class="block text-xs font-semibold uppercase text-slate-700 mb-2">Message or Special Requests</label>
+                  <textarea
+                    id="user-message"
+                    rows="4"
+                    placeholder="Tell us about lane preference, swimming experience, or family member count..."
+                    class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:bg-white focus:border-aqua focus:ring-2 focus:ring-aqua/20 outline-none text-sm transition-all"
+                  ></textarea>
+                </div>
+
+                <div class="flex items-center gap-3 pt-2">
+                  <input
+                    type="checkbox"
+                    id="terms-check"
+                    required
+                    checked
+                    class="w-4 h-4 text-ocean rounded border-slate-300 focus:ring-aqua"
+                  />
+                  <label for="terms-check" class="text-xs text-slate-500">
+                    I agree to the aquatic center safety guidelines and pool hygiene policies.
+                  </label>
+                </div>
+
+                <button
+                  type="submit"
+                  id="submit-btn"
+                  class="w-full py-4 px-8 rounded-2xl font-bold text-white bg-gradient-to-r from-ocean to-aqua hover:from-ocean-dark hover:to-ocean shadow-xl shadow-ocean/20 transition-all duration-200 transform hover:-translate-y-0.5 text-base flex items-center justify-center gap-2 cursor-pointer"
+                >
+                  <span id="btn-text">Confirm Reservation &amp; Inquire</span>
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                  </svg>
+                </button>
+
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 8. FOOTER -->
+    <footer class="bg-navy text-white pt-16 pb-12 border-t border-ocean-dark relative overflow-hidden">
+      <!-- Background subtle glow -->
+      <div class="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-ocean/10 blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
+          
+          <!-- Column 1: Brand Info -->
+          <div class="lg:col-span-2 space-y-4">
+            <a href="#home" class="flex items-center gap-3 group">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-ocean to-aqua flex items-center justify-center text-white shadow-md">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+                  <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+                  <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+                </svg>
+              </div>
+              <span class="text-2xl font-extrabold tracking-tight text-white">AquaZone<span class="text-aqua">.</span></span>
+            </a>
+            <p class="text-cyan-100/70 text-sm max-w-sm leading-relaxed">
+              Southern California's premier aquatic resort and training center. FINA-regulation Olympic lap pools, soothing hydro spas, and family water park.
+            </p>
+            <!-- Social Media Icons -->
+            <div class="flex items-center gap-3 pt-2">
+              <a href="#home" class="w-9 h-9 rounded-full bg-white/10 hover:bg-aqua hover:text-navy flex items-center justify-center text-white transition-colors" aria-label="Instagram">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="#home" class="w-9 h-9 rounded-full bg-white/10 hover:bg-aqua hover:text-navy flex items-center justify-center text-white transition-colors" aria-label="Facebook">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="#home" class="w-9 h-9 rounded-full bg-white/10 hover:bg-aqua hover:text-navy flex items-center justify-center text-white transition-colors" aria-label="YouTube">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+              <a href="#home" class="w-9 h-9 rounded-full bg-white/10 hover:bg-aqua hover:text-navy flex items-center justify-center text-white transition-colors" aria-label="Twitter">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div>
+            <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-4">Quick Links</h4>
+            <ul class="space-y-2 text-sm text-cyan-100/70">
+              <li><a href="#home" class="hover:text-aqua transition-colors">Home</a></li>
+              <li><a href="#about" class="hover:text-aqua transition-colors">About Center</a></li>
+              <li><a href="#facilities" class="hover:text-aqua transition-colors">Aquatic Facilities</a></li>
+              <li><a href="#memberships" class="hover:text-aqua transition-colors">Membership Tiers</a></li>
+              <li><a href="#schedule" class="hover:text-aqua transition-colors">Schedule &amp; Classes</a></li>
+              <li><a href="#gallery" class="hover:text-aqua transition-colors">Photo Gallery</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Facility Services -->
+          <div>
+            <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-4">Amenities</h4>
+            <ul class="space-y-2 text-sm text-cyan-100/70">
+              <li><a href="#facilities" class="hover:text-aqua transition-colors">50m Heated Lap Pool</a></li>
+              <li><a href="#facilities" class="hover:text-aqua transition-colors">Kids Splash Lagoon</a></li>
+              <li><a href="#facilities" class="hover:text-aqua transition-colors">Finnish Steam &amp; Sauna</a></li>
+              <li><a href="#facilities" class="hover:text-aqua transition-colors">Private Swim Academy</a></li>
+              <li><a href="#facilities" class="hover:text-aqua transition-colors">Whirlpool Hydro-Spa</a></li>
+              <li><a href="#contact" class="hover:text-aqua transition-colors">Private Cabana Hire</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Newsletter Sign-up -->
+          <div>
+            <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-4">Stay Connected</h4>
+            <p class="text-xs text-cyan-100/70 mb-4 leading-relaxed">
+              Get weekly lane notifications, special holiday passes, and aquatic wellness tips.
+            </p>
+            <form onsubmit="handleNewsletterSubmit(event)" class="space-y-2">
+              <input
+                type="email"
+                required
+                placeholder="Enter your email"
+                class="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white text-xs placeholder:text-cyan-200/50 focus:outline-none focus:border-aqua"
+              />
+              <button
+                type="submit"
+                class="w-full py-2.5 px-4 rounded-xl bg-aqua hover:bg-cyan-300 text-navy font-bold text-xs transition-colors"
+              >
+                Subscribe
+              </button>
+            </form>
+            <p id="newsletter-status" class="text-[11px] text-emerald-400 hidden pt-1">
+              ✓ Thanks for subscribing to AquaZone news!
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Copyright Row -->
+        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-cyan-100/60 gap-4">
+          <p>© 2026 AquaZone Pools &amp; Aquatic Center. All rights reserved.</p>
+          <div class="flex items-center gap-6">
+            <a href="#home" class="hover:text-aqua transition-colors">Privacy Policy</a>
+            <a href="#home" class="hover:text-aqua transition-colors">Terms of Service</a>
+            <a href="#home" class="hover:text-aqua transition-colors">Pool Safety Rules</a>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- POP-UP NOTIFICATION MODAL (Quick booking feedback) -->
+    <div id="booking-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-navy/75 backdrop-blur-sm">
+      <div class="bg-white rounded-3xl p-8 max-w-md w-full shadow-2xl border border-cyan-100 transform transition-all text-center relative animate-in fade-in zoom-in duration-200">
+        
+        <!-- Close button -->
+        <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 p-2 rounded-full hover:bg-slate-100 transition-colors" aria-label="Close modal">
+          ✕
+        </button>
+
+        <!-- Wave success icon -->
+        <div class="w-16 h-16 rounded-2xl bg-water text-ocean flex items-center justify-center mx-auto mb-5 shadow-inner">
+          <svg class="w-9 h-9 text-aqua" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+          </svg>
+        </div>
+
+        <h3 class="text-2xl font-extrabold text-navy mb-2">Reservation Received!</h3>
+        <p class="text-sm text-slate-600 mb-6 leading-relaxed">
+          Thank you, <span id="modal-user-name" class="font-bold text-ocean">Guest</span>. We have logged your request for the <strong id="modal-plan" class="text-navy">Day Pass</strong> on <span id="modal-date" class="font-semibold text-slate-800">your selected date</span>.
+        </p>
+
+        <div class="bg-water-soft p-4 rounded-2xl border border-cyan-100 text-left text-xs text-slate-600 space-y-1.5 mb-6">
+          <p><span class="font-bold text-navy">Reference:</span> #AQZ-<span id="modal-ref-id">82910</span></p>
+          <p><span class="font-bold text-navy">Confirmation Email:</span> Sent to your inbox</p>
+          <p><span class="font-bold text-navy">Check-In:</span> Present your reference code at the front concierge desk.</p>
+        </div>
+
+        <button onclick="closeBookingModal()" class="w-full py-3.5 px-6 rounded-2xl font-bold text-white bg-gradient-to-r from-ocean to-aqua hover:from-ocean-dark hover:to-ocean shadow-lg shadow-aqua/25 transition-all">
+          Great, Back to Website
+        </button>
+      </div>
+    </div>
+
+    <!-- GALLERY LIGHTBOX MODAL -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-navy/90 backdrop-blur-md" onclick="closeLightbox(event)">
+      <div class="relative max-w-4xl w-full flex flex-col items-center" onclick="event.stopPropagation()">
+        <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white hover:text-aqua p-2 text-2xl font-bold focus:outline-none" aria-label="Close Lightbox">
+          ✕
+        </button>
+        <img id="lightbox-img" src="" alt="Aquatic Center Gallery Preview" class="w-full max-h-[80vh] object-contain rounded-2xl shadow-2xl border border-white/20" />
+        <p id="lightbox-caption" class="text-white text-base font-semibold mt-4 text-center"></p>
+      </div>
+    </div>
+
+    <!-- VANILLA JAVASCRIPT LOGIC -->
+    <script>
+      // Set default minimum date for contact form to today
+      document.addEventListener('DOMContentLoaded', () => {
+        const dateInput = document.getElementById('visit-date');
+        if (dateInput) {
+          const today = new Date().toISOString().split('T')[0];
+          dateInput.min = today;
+          dateInput.value = today;
+        }
+      });
+
+      // 1. Sticky Navbar Glassmorphism on Scroll
+      const header = document.getElementById('main-header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 40) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+
+      // 2. Mobile Menu Toggle
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const hamburgerIcon = document.getElementById('hamburger-icon');
+      const closeIcon = document.getElementById('close-icon');
+
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+          const isHidden = mobileMenu.classList.contains('hidden');
+          if (isHidden) {
+            mobileMenu.classList.remove('hidden');
+            hamburgerIcon.classList.add('hidden');
+            closeIcon.classList.remove('hidden');
+          } else {
+            mobileMenu.classList.add('hidden');
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+          }
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+          });
+        });
+      }
+
+      // 3. Pre-select plan and scroll to contact
+      function choosePlan(planName) {
+        setPlanSelect(planName);
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+
+      function setPlanSelect(planName) {
+        const planSelect = document.getElementById('plan-select');
+        if (planSelect) {
+          for (let i = 0; i < planSelect.options.length; i++) {
+            if (planSelect.options[i].value.toLowerCase().includes(planName.toLowerCase())) {
+              planSelect.selectedIndex = i;
+              break;
+            }
+          }
+        }
+      }
+
+      function setBookingClass(className) {
+        const messageBox = document.getElementById('user-message');
+        if (messageBox) {
+          messageBox.value = `I would like to reserve a spot for the "${className}" session.`;
+        }
+        const planSelect = document.getElementById('plan-select');
+        if (planSelect) {
+          planSelect.value = "Aqua Aerobics Class";
+        }
+      }
+
+      // 4. Live Schedule Filtering
+      function filterSchedule(category) {
+        const items = document.querySelectorAll('.schedule-item');
+        const buttons = document.querySelectorAll('.schedule-tab');
+
+        buttons.forEach(btn => {
+          if (btn.getAttribute('data-category') === category) {
+            btn.classList.remove('bg-water', 'text-navy', 'hover:bg-cyan-100');
+            btn.classList.add('bg-ocean', 'text-white', 'shadow-md');
+          } else {
+            btn.classList.remove('bg-ocean', 'text-white', 'shadow-md');
+            btn.classList.add('bg-water', 'text-navy', 'hover:bg-cyan-100');
+          }
+        });
+
+        items.forEach(item => {
+          if (category === 'all' || item.getAttribute('data-category') === category) {
+            item.style.display = 'flex';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      }
+
+      // 5. Lightbox Modal
+      function openLightbox(imageUrl, caption) {
+        const modal = document.getElementById('lightbox-modal');
+        const img = document.getElementById('lightbox-img');
+        const cap = document.getElementById('lightbox-caption');
+        img.src = imageUrl;
+        cap.textContent = caption;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        const modal = document.getElementById('lightbox-modal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+      }
+
+      // Close modal on Escape key
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeLightbox();
+          closeBookingModal();
+        }
+      });
+
+      // 6. Contact Form Submission & Popup Modal
+      function handleFormSubmit(event) {
+        event.preventDefault();
+        
+        const submitBtn = document.getElementById('submit-btn');
+        const btnText = document.getElementById('btn-text');
+        const name = document.getElementById('user-name').value;
+        const plan = document.getElementById('plan-select').value;
+        const date = document.getElementById('visit-date').value;
+
+        // Visual loading state
+        btnText.textContent = "Processing Reservation...";
+        submitBtn.disabled = true;
+
+        setTimeout(() => {
+          // Reset button
+          btnText.textContent = "Confirm Reservation & Inquire";
+          submitBtn.disabled = false;
+
+          // Populate modal
+          document.getElementById('modal-user-name').textContent = name || 'Guest';
+          document.getElementById('modal-plan').textContent = plan;
+          document.getElementById('modal-date').textContent = date || 'your selected date';
+          document.getElementById('modal-ref-id').textContent = Math.floor(10000 + Math.random() * 90000);
+
+          // Open popup notification modal
+          const modal = document.getElementById('booking-modal');
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+          document.body.style.overflow = 'hidden';
+
+          // Reset form inputs
+          document.getElementById('contact-form').reset();
+        }, 500);
+      }
+
+      function closeBookingModal() {
+        const modal = document.getElementById('booking-modal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+      }
+
+      // 7. Newsletter Subscription Handler
+      function handleNewsletterSubmit(event) {
+        event.preventDefault();
+        const status = document.getElementById('newsletter-status');
+        if (status) {
+          status.classList.remove('hidden');
+          setTimeout(() => {
+            status.classList.add('hidden');
+          }, 4000);
+        }
+        event.target.reset();
+      }
+    </script>
+  </body>
+</html>

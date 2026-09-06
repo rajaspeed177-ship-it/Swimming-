@@ -1,0 +1,6 @@
+{
+  "name": "AquaZone Pools",
+  "description": "Modern luxury swimming pool and resort-style aquatic center featuring heated Olympic pools, spa lounge, memberships, and live schedules.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
